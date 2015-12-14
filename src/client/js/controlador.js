@@ -18,7 +18,7 @@ $scope.login= function (){
  sessionStorage.removeItem('nom2');
  sessionStorage.removeItem('id');
  if($scope.nU !=null || $scope.pass !=null){
-$.get('https://104.131.211.44:8000/api/users/authenticate',
+$.get('http://104.131.211.44:8000/api/users/authenticate',
   { 
    iduser:$scope.nU,
    password:$scope.pass
@@ -62,7 +62,7 @@ $.get('https://104.131.211.44:8000/api/users/authenticate',
         });
     }, 4000);
  //esta es una variable bnecesaria en home  
- $.get('https://104.131.211.44:8000/api/users/dataclient',
+ $.get('http://104.131.211.44:8000/api/users/dataclient',
   { 
    idusercon: sessionStorage.getItem('id'),
   },function( data ) {
@@ -84,7 +84,7 @@ $.get('https://104.131.211.44:8000/api/users/authenticate',
     $scope.idtipo=data.dsCli.nameTypeID;
     //esta parte es para mostrar la cuenta maestra
     var usr=data.idUserCon;
-    $.get('https://104.131.211.44:8000/api/users/acountClient',
+    $.get('http://104.131.211.44:8000/api/users/acountClient',
   { 
    iduseracount:usr
   },function( data ) {
@@ -94,7 +94,7 @@ var cuenta =data.cuentasString.split('*');
 $scope.cuMaestra=cuenta[0];
 //en esta parte consultamos el saldo
 var datosUsuario =cuenta[0];
-    $.get('https://104.131.211.44:8000/api/acounts/dataAcount',
+    $.get('http://104.131.211.44:8000/api/acounts/dataAcount',
   { 
    idacount: datosUsuario,
   },function( data ) {
@@ -160,7 +160,7 @@ var datosUsuario =cuenta[0];
         });
     }, 2000);
     var usr=sessionStorage.getItem('id');
- $.get('https://104.131.211.44:8000/api/users/acountClient',
+ $.get('http://104.131.211.44:8000/api/users/acountClient',
   { 
    iduseracount:usr
   },function( data ) {
@@ -183,7 +183,7 @@ var datosUsuario =cuenta[0];
  $scope.consultaPubAYA= function (){
   
  if($scope.numeroC !=null ){
-$.get('https://104.131.211.44:8000/api/services/dataService',
+$.get('http://104.131.211.44:8000/api/services/dataService',
   { 
    numservicio:$scope.numeroC,
    tipo:'01'
@@ -218,7 +218,7 @@ $("#errorG").modal("show");
  $scope.consultaPubICE= function (){
 
  if($scope.numeroC !=null ){
-$.get('https://104.131.211.44:8000/api/services/dataService',
+$.get('http://104.131.211.44:8000/api/services/dataService',
   { 
    numservicio:$scope.numeroC,
    tipo:'02'
@@ -253,7 +253,7 @@ $("#errorG").modal("show");
 $scope.consultaPubCNFL= function (){
 
  if($scope.numeroC !=null ){
-$.get('https://104.131.211.44:8000/api/services/dataService',
+$.get('http://104.131.211.44:8000/api/services/dataService',
   { 
    numservicio:$scope.numeroC,
    tipo:'03'
@@ -288,7 +288,7 @@ $("#errorG").modal("show");
 $scope.consultaPubICETEL= function (){
 
  if($scope.numeroC !=null ){
-$.get('https://104.131.211.44:8000/api/services/dataService',
+$.get('http://104.131.211.44:8000/api/services/dataService',
   { 
    numservicio:$scope.numeroC,
    tipo:'04'
@@ -323,7 +323,7 @@ $("#errorG").modal("show");
 $scope.consultaReKolbi= function (){
   
  if($scope.numeCelk !=null ){
-$.get('https://104.131.211.44:8000/api/services/ConsultaNumeroTel',
+$.get('http://104.131.211.44:8000/api/services/ConsultaNumeroTel',
   { 
    numero:$scope.numeCelk,
    tipoem:'01',
@@ -345,7 +345,7 @@ $.get('https://104.131.211.44:8000/api/services/ConsultaNumeroTel',
 $scope.consultaReClaro= function (){
   
  if($scope.numeCelC !=null ){
-$.get('https://104.131.211.44:8000/api/services/ConsultaNumeroTel',
+$.get('http://104.131.211.44:8000/api/services/ConsultaNumeroTel',
   { 
    numero:$scope.numeCelC,
    tipoem:'02',
@@ -367,7 +367,7 @@ $.get('https://104.131.211.44:8000/api/services/ConsultaNumeroTel',
 $scope.consultaReMovi= function (){
   
  if($scope.numeCelM !=null ){
-$.get('https://104.131.211.44:8000/api/services/ConsultaNumeroTel',
+$.get('http://104.131.211.44:8000/api/services/ConsultaNumeroTel',
   { 
    numero:$scope.numeCelM,
    tipoem:'03',
@@ -391,7 +391,7 @@ $scope.actualizaPago= function (){
  var cuent=$("#sel6").val();
 // alert(cuent+"  "+$scope.monto1);
 if(cuent.trim()!=""){
-$.get('https://104.131.211.44:8000/api/services/PagoServicios',
+$.get('http://104.131.211.44:8000/api/services/PagoServicios',
   { 
     numcuenta:cuent,
     montopago:$scope.monto1
@@ -418,7 +418,7 @@ $scope.actualizaPago2= function (){
  var cuent=$("#sel5").val();
 // alert(cuent+"  "+$scope.montoC);
 if(cuent.trim()!=""){
-$.get('https://104.131.211.44:8000/api/services/PagoServicios',
+$.get('http://104.131.211.44:8000/api/services/PagoServicios',
   { 
     numcuenta:cuent,
     montopago:$scope.montoC
@@ -475,7 +475,7 @@ $scope.questlogout= function (){
  $scope.monto=monto1;
  
  var usr=sessionStorage.getItem('id');
- $.get('https://104.131.211.44:8000/api/users/acountClient',
+ $.get('http://104.131.211.44:8000/api/users/acountClient',
   { 
    iduseracount:usr
   },function( data ) {
@@ -511,7 +511,7 @@ $scope.questlogout= function (){
   $scope.ccuenta= function (){
    var ele= $("#sel").val();
              var datosUsuario = ele;
-    $.get('https://104.131.211.44:8000/api/acounts/dataAcount',
+    $.get('http://104.131.211.44:8000/api/acounts/dataAcount',
   { 
    idacount: datosUsuario,
   },function( data ) {
@@ -543,7 +543,7 @@ $scope.questlogout= function (){
 if(datosUsuario.trim()!=""){
 	//alert(datosUsuario);
 		$("#idVer").html("<strong>Verificando numero de cuenta</strong>");
-    $.get('https://104.131.211.44:8000/api/acounts/dataCliAcount',
+    $.get('http://104.131.211.44:8000/api/acounts/dataCliAcount',
   { 
    idacount: datosUsuario,
   },function( data ) {
@@ -587,7 +587,7 @@ if(monto1==null || cuenta1==null || cuenta2==null || monto1.trim()==""|| cuenta1
 		$("#myErrorBlank").modal("hide");
   },2000);
 }else{
-    $.get('https://104.131.211.44:8000/api/acounts/transac',
+    $.get('http://104.131.211.44:8000/api/acounts/transac',
   { 
    idacount1: cuenta1,
    idacount2: cuenta2,
@@ -631,7 +631,7 @@ if(monto1==null || cuenta1==null || cuenta2==null || monto1.trim()==""|| cuenta1
 		$("#myErrorBlank").modal("hide");
   },2000);
 }else{
-    $.get('https://104.131.211.44:8000/api/acounts/transac',
+    $.get('http://104.131.211.44:8000/api/acounts/transac',
   { 
    idacount1: cuenta1,
    idacount2: cuenta2,
@@ -718,7 +718,7 @@ var cuenta2 = '';
 //metodo que consulta numeros de cuenta de un cliente
 function numCuenta(id){
 	
-	  $.get('https://104.131.211.44:8000/api/users/numCuenta',
+	  $.get('http://104.131.211.44:8000/api/users/numCuenta',
   { 
    idusercon: id,
   },function( data ) {
@@ -733,7 +733,7 @@ function numCuenta(id){
 //carga la info de home 
   ///////////////////////////////////////////////////////////
  function initInfo ($scope){
-    $.get('https://104.131.211.44:8000/api/users/dataclient',
+    $.get('http://104.131.211.44:8000/api/users/dataclient',
   { 
    idusercon: sessionStorage.getItem('id'),
   },function( data ) {
@@ -755,7 +755,7 @@ function numCuenta(id){
     $scope.idtipo=data.dsCli.nameTypeID;
     //esta parte es para mostrar la cuenta maestra
     var usr=data.idUserCon;
-    $.get('https://104.131.211.44:8000/api/users/acountClient',
+    $.get('http://104.131.211.44:8000/api/users/acountClient',
   { 
    iduseracount:usr
   },function( data ) {
@@ -765,7 +765,7 @@ var cuenta =data.cuentasString.split('*');
 $scope.cuMaestra=cuenta[0];
 //en esta parte consultamos el saldo
 var datosUsuario =cuenta[0];
-    $.get('https://104.131.211.44:8000/api/acounts/dataAcount',
+    $.get('http://104.131.211.44:8000/api/acounts/dataAcount',
   { 
    idacount: datosUsuario,
   },function( data ) {
@@ -802,7 +802,7 @@ window.location="index.html";
 
 function numCuenta(){
 	var datosUsuario = sessionStorage.getItem('id');
-	  $.get('https://104.131.211.44:8000/api/users/numCuenta',
+	  $.get('http://104.131.211.44:8000/api/users/numCuenta',
   { 
    idusercon: datosUsuario,
   },function( data ) {
