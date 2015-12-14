@@ -1,0 +1,36 @@
+<ion-view  class="col left-center" title="Inicio de sesión">
+    <ion-content padding="'true'" class="has-header">
+        <form class="list" ng-controller="loginCtrl">
+        <section class="sec">
+        <center><img  src="./img/logo.png"></center>
+        </section>
+         <div class="col text-center">
+          <H4>DATA MÓVIL</H4>
+       </div>
+        <br/>
+            <ion-list>
+                <label class="item item-input">
+                    <!--<span class="input-label">Username:</span>-->
+                    <i class="icon ion-person placeholder-icon"></i>
+                    <input type="text" name="nU" id="nU" ng-model="nU" placeholder="Codigo de identificación">
+                </label>
+                <br/>
+                <label class="item item-input">
+                    <!--<span class="input-label">Password:</span>-->
+                    <i class="icon ion-locked placeholder-icon"></i>
+                    <input type="password" name="pass" id="pass" ng-model="pass" placeholder="Contraseña">
+                </label>
+            </ion-list>
+            <div class="spacer" style="height: 40px;"></div>
+           <!--  <a menu-close=""  class="button button-stable button-block ">Ingresar</a>-->
+            
+            <button ng-click="login()" menu-close=""  class="button ion-log-in button-block ">&nbsp&nbspINGRESAR</button>
+            <!-- href="#/page3/page4"-->
+           
+            <script>
+                window.location.assign("./index.html");
+            </script>
+        </form>
+         
+    </ion-content>
+</ion-view>

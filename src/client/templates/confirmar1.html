@@ -1,0 +1,19 @@
+<ion-view title="Confirmar">
+    
+    <ion-content padding="'true'" class="has-header">
+        <form class="list" ng-controller="Select1Ctrl">
+          
+            <ion-item class="item-divider">Propietario:<strong id="propi1" name="propi1"></strong></ion-item>
+            <div class="secC">
+            <div class="span3" id="tipoC1"><strong>Tipo: Cuentas Distintas</strong> </div>
+            <div class="span3" id="cO"><strong>Cuenta Origen:</strong>{{cuentaOri}}</div>
+            <div class="span3"  id="cD"><strong>Cuenta Destino:</strong>{{cuentadestino}} </div>
+            <div class="span3"  id="mT"><strong>Monto a transferir: ₡</strong>{{monto}} </div>
+            <div class="span3"  id="mD"><strong>Monto a debitar: ₡</strong>{{monto}} </div>
+            </div>
+            <button ng-click="transac()" class="button button-stable button-block ">Confirmar</button>
+			<a href="#/side-menu22/page7" class="button button-stable button-block ">Cancelar</a>
+        </form>
+
+    </ion-content>
+</ion-view>

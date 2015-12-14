@@ -1,0 +1,24 @@
+<ion-view title="Consultas">
+    
+    <ion-content padding="'true'" class="has-header">
+        <form class="list" ng-controller="Select1Ctrl">
+            <ion-item  class="item-divider">Cuentas:</ion-item>
+            <label class="item item-select" >
+                <span  class="input-label" >Mis Cuentas</span>
+                <select id="sel" name="sel" ng-model="ele" ng-change="ccuenta();">
+                </select>
+               
+            </label>
+            
+            <ion-item class="item-divider">Propietario:<strong id="propi" name="propi"></strong></ion-item>
+            <div class="secC">
+            <div class="span3" id="nc"><strong># Cuenta:</strong> </div>
+            <div class="span3" id="cc"><strong># Cédula:</strong> </div>
+            <div class="span3" id="tc"><strong>Tipo Cuenta:</strong> </div>
+            <div class="span3" id="m"><strong>Estado:</strong> </div>
+            <div class="span3" id="s"><strong>Saldo:</strong> </div>
+            </div>
+        </form>
+
+    </ion-content>
+</ion-view>

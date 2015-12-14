@@ -1,0 +1,26 @@
+<ion-view title="Transferencia entre tus cuentas">
+    <ion-content padding="'true'" class="has-header">
+    	 <form class="list" ng-controller="Select1Ctrl">
+            <ion-list>
+                <ion-item class="item-divider">Especifique el monto a transferir</ion-item>
+                <label class="item item-input" name="monto">
+                    <input id="monto" name="monto" type="number" placeholder="monto atransferir en colones">
+                </label>
+                <ion-item class="item-divider">Cuenta a debitar (de donde se saca el dinero)</ion-item>
+                <label class="item item-select">
+                    <span class="input-label">Cuenta 1</span>
+                    <select id="sel2" name="sel2" ></select>
+                </label>
+                <ion-item class="item-divider">Cuenta a acreditar (a donde se deposita el dinero)</ion-item>
+                <label class="item item-select">
+                    <span class="input-label">Cuenta 2</span>
+                    <select id="sel3" name="sel3" ></select>
+                </label>
+            </ion-list>
+            <button  ng-click="confirma()" class="button button-stable button-block ">Procesar</button>
+        </form>
+        
+        
+    </ion-content>
+    
+</ion-view>

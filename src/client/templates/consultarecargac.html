@@ -1,0 +1,21 @@
+<ion-view title="Consultar Servico">
+    
+    <ion-content padding="'true'" class="has-header">
+        <form class="list" ng-controller="PagosCtrl">
+          
+            <ion-item class="item-divider">Recarga Claro</ion-item>
+            <div class="secC">
+            <div class="span3" id=""><strong>Número de servicio:</strong> </div>
+            <div class="span3" id="">
+                <label class="item item-input">
+                    <input name="numeCelC" id='numeCelC' ng-model="numeCelC" type="number" placeholder="Digite el numero a consultar">
+                </label>
+            </div>
+            
+            </div>
+            <button ng-click="consultaReClaro()" class="button button-stable button-block ">Consultar</button>
+			<!--<a href="#/side-menu22/page18" class="button button-stable button-block ">Cancelar</a>-->
+        </form>
+
+    </ion-content>
+</ion-view>

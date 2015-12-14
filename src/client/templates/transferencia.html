@@ -1,0 +1,32 @@
+<ion-view title="Transferencia">
+    <ion-content padding="'true'"  class="has-header">
+        <form class="list" ng-controller="Select1Ctrl">
+            <ion-list>
+                <ion-item class="item-divider">Especifique el monto a transferir</ion-item>
+                <label class="item item-input" >
+                    <input id="montoT" name="montoT" type="number" placeholder="monto atransferir en colones">
+                </label>
+                <ion-item class="item-divider">Cuenta a debitar (de donde se saca el dinero)</ion-item>
+                <label class="item item-select">
+                    <span class="input-label">Cuenta 1</span>
+                    <select id="sel4" name="sel4"></select>
+                </label>
+                <ion-item class="item-divider">Cuenta a acreditar (a donde se deposita el dinero)</ion-item>
+                <label class="item item-input">
+                    <input name="cuenta2" id='cuenta2' type="number" placeholder="Digite el numero de cuenta">
+                </label>
+                <div class="secC">
+                <div class="span3" id="idVer"> </div>
+        		<div class="span3" id="nombVer"></div>
+        		<div class="span3" id="ape1Ver"> </div>
+        		<div class="span3" id=ape2Ver> </div>
+            </div>
+            </ion-list>
+            
+            <button ng-click="dataClientAcount();" class="button  button-block ">Verificar Cuenta</button>
+            <button ng-click="confirma1()" class="button button-stable button-block ">Procesar</button>
+        </form>
+        
+    </ion-content>
+   
+</ion-view>

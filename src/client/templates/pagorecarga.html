@@ -1,0 +1,30 @@
+<ion-view title="Verificación">
+    
+    <ion-content padding="'true'" class="has-header">
+        <form class="list" ng-controller="PagosCtrl">
+          
+            <ion-item class="item-divider">Claro recarga</ion-item>
+            <div class="secC">
+            <div class="span3" id=""><strong>Número:</strong> </div>
+            <div class="span3" id="">
+                 {{numTelK}}
+                 
+            </div>
+            <div class="span3" id=""><strong>monto:</strong> </div>
+            <div class="span3" id="">
+                <label class="item item-input">
+                    <input name="montoC" id='montoC' ng-model="montoC" type="number" placeholder="Digite el monto a recargar">
+                </label>
+            </div>
+            <div class="span3" id=""><strong>Cuenta:</strong> </div>
+            <label class="item item-select">
+                    <span class="input-label">Cuenta:</span>
+                    <select id="sel5" ng-model='sel5' name="sel5" ></select>
+                </label>
+            </div>
+            <button ng-click="actualizaPago2()" class="button button-stable button-block ">Recargar</button>
+			<!--<a href="#/side-menu22/page18" class="button button-stable button-block ">Cancelar</a>-->
+        </form>
+
+    </ion-content>
+</ion-view>
