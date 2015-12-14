@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <style>
+      .angular-google-map-container {
+          width: 100%;
+          height: 504px;
+      }
+       .rojo {
+            color:#AB1212;
+            
+        }
+        
+    </style>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    
+    <link href="http://code.ionicframework.com/ionicons/1.5.2/css/ionicons.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <script src="js/app.js"></script>
+    <script src="js/controllers.js"></script>
+    <script src="js/routes.js"></script>
+    <script src="js/services.js"></script>
+    <script src="js/directives.js"></script>
+    <script src="js/controlador.js"></script>
+
+  </head>
+ <body class="body-tumblr" ng-app="app" animation="slide-left-right-ios7">
+  <div>
+    <div>
+        <ion-nav-bar class="bar-stable">
+            <!--<ion-nav-back-button class="button-icon icon ion-ios-arrow-back">Back</ion-nav-back-button>-->
+        </ion-nav-bar>
+        <ion-nav-view class="white"></ion-nav-view>
+    </div>
+</div>
+<!--comienzan las ventanas-->
+ <!-- tecnica nija para llamar la ventana, es el id que llamams luego -->
+				<div id="myModal" class="modal hide fade" >
+				  <div class="modal-body">
+					<h3>Bienvenido(a)
+					</h3>
+				 <center><img  src="img/logo (2).png"></center>
+        	</div>
+					<div class="modal-footer">
+					  <!--<button type="button"data-dismiss="modal"  class="btn btn-warning">Aceptar</button>-->
+					  </div>
+          </div>
+          
+<!--find el la ventana de bienvanida-->
+<!-- ventana de error-->
+				<div id="myError" class="modal hide fade">
+				  <div class="modal-body">
+					<h3>Usuario y/o Contraseña erroneo</h3>
+					<h1 icon="ion-alert-circled"></h1>
+				 </div>
+					<div class="modal-footer">
+					  <button type="button"data-dismiss="modal"  class="btn btn-warning">Aceptar</button>
+					  </div>
+          </div>
+<!--find el la ventana de error-->
+<!-- ventana de error-->
+				<div id="myErrorBlank" class="modal hide fade">
+				  <div class="modal-body">
+					<h4>Hay espacios en blanco o el valor no puede ser procesado</h4>
+					
+				 </div>
+					<div class="modal-footer">
+					  <button type="button"data-dismiss="modal"  class="btn btn-warning">Aceptar</button>
+					  </div>
+          </div>
+<!--find el la ventana de bienvanida-->
+<!-- ventana de error-->
+				<div id="myErrorTran" class="modal hide fade">
+				  <div class="modal-body">
+					<h3>Transacción Invalida</h3>
+					
+				 </div>
+					<div class="modal-footer">
+					  <button type="button"data-dismiss="modal"  class="btn btn-warning">Aceptar</button>
+					  </div>
+          </div>
+<!--find el la ventana de bienvanida-->
+<!-- ventana de exito-->
+				<div id="TrancExito" class="modal hide fade">
+				  <div class="modal-body">
+					<h3>Transacción Exitosa</h3>
+					
+				 </div>
+					<div class="modal-footer">
+					  <button type="button"data-dismiss="modal"  class="btn btn-warning">Aceptar</button>
+					  </div>
+          </div>
+<!--find el la ventana de exito-->
+<!-- ventana qu epregunta si esta seguro de salir-->
+				<div id="questLogout" class="modal hide fade">
+				  <div class="modal-body">
+					<h4>¿Seguro que desea salir de la sesión?</h4>
+					
+				 </div>
+					<div class="modal-footer">
+					 <button type="button" onclick='logout()' class="btn btn-warning">Aceptar</button>
+					<button type="button" class="btn" data-dismiss="modal">Cancelar</button>
+					  </div>
+          </div>
+<!--find el la ventana de logout-->
+<!-- ventana de error NUMERO NO EXISTE-->
+				<div id="errorG" class="modal hide fade">
+				  <div class="modal-body">
+					<h3>¡El numero no existe!</h3>
+					
+				 </div>
+					<div class="modal-footer">
+					  <button type="button"data-dismiss="modal"  class="btn btn-warning">Aceptar</button>
+					  </div>
+          </div>
+<!--find el la ventana de error -->
+  </body>
+<script>
+
+function logout(){
+                window.location.assign("./index.html");
+                sessionStorage.removeItem('id');
+}
+</script>
+</html>
